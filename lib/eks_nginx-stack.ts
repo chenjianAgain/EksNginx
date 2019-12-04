@@ -20,12 +20,12 @@ export class EksNginxStack extends cdk.Stack {
       defaultCapacity: 0,
     });
     
-//     // add some capacity to the cluster. The IAM instance role will
-//     // automatically be mapped via aws-auth to allow nodes to join the cluster.
-//     this.cluster.addCapacity('Nodes', {
-//       instanceType: new ec2.InstanceType('t2.medium'),
-//       desiredCapacity: 2,
-//     });
+    // add some capacity to the cluster. The IAM instance role will
+    // automatically be mapped via aws-auth to allow nodes to join the cluster.
+    this.cluster.addCapacity('Nodes', {
+      instanceType: new ec2.InstanceType('t2.medium'),
+      desiredCapacity: 2,
+    });
 
   }
 }
